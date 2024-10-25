@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lottery Draw</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="text-center p-4">
+        <img src="imagenes/LOGO.png" alt="Logo" class="img-fluid" />
+        <h1>PREMIO <mark>$150,000</mark></h1>
+        <h2 id="current-date"></h2>
+        <h4>valor de la boleta: $2,000</h4>
+        <div class="lottery-image neon-effect"></div>
+        <div class="centro">
+            <img src="imagenes/Loteria-de-Bogota.jpeg" width="300px" alt="Descripción de la imagen">
+        </div>
+    </header>
+    
+
+    <main class="container">
+        <section class="text-center">
+            <h3>Seleccionar Número(00-99)</h3>
+            <div id="numbers-container" class="d-flex flex-wrap justify-content-center"></div>
+        </section>
+
+        <section>
+            <h3 style="text-align: center;">Datos del Cliente</h3>
+            <table class="table table-bordered" id="user-data-table">
+                <thead>
+                    <tr style="text-align: center;">
+                        <th>Número</th>
+                        <th>Nombre</th>
+                        <th>Celular</th>
+                        <th>Estado</th>
+                        <th>Acción</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </section>
+
+        <button id="restart-draw" class="btn btn-danger">Reiniciar Sorteo</button>
+        <button id="generate-pdf" class="btn btn-info">Generar Rresumen en PDF</button>
+    </main>
+
+    <div id="inputModal" class="modal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Enter Customer Data</h5>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <input type="text" id="customer-name" placeholder="Customer Name" class="form-control" />
+                    <input type="text" id="customer-phone" placeholder="Phone Number" class="form-control" />
+                </div>
+                <div class="modal-footer">
+                    <button id="save-button" class="btn btn-success">Save</button>
+                    <button id="must-button" class="btn btn-danger">Must</button>
+                    <button id="payment-button" class="btn btn-success">Payment</button>
+                    <button id="clear-button" class="btn btn-warning">Clear</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

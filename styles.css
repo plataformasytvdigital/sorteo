@@ -1,0 +1,58 @@
+body {
+    margin: 0;
+    height: 100vh;
+    background-image: url('https://i.pinimg.com/originals/47/2e/48/472e488ac82a6a09b10b8969a96bf03a.gif');
+    background-color: rgb(207, 206, 206);
+    background-size: cover; /* Ajusta el tamaño del fondo */
+    background-repeat: no-repeat; /* No repite la imagen */
+    background-position: center; /* Centra el fondo */
+}
+
+.lottery-image {
+    width: 100px; /* Adjust as needed */
+    height: 100px; /* Adjust as needed */
+    background: url('lottery.png') no-repeat center center;
+    background-size: contain;
+    animation: neon 1.5s infinite alternate;
+}
+
+@keyframes neon {
+    from {
+        filter: brightness(1);
+    }
+    to {
+        filter: brightness(1.5);
+    }
+}
+
+.circle {
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 5px;
+}
+
+.status-red {
+    background-color: red;
+    color: white;
+}
+
+.status-green {
+    background-color: green;
+    color: white;
+}
+
+.status-default {
+    background-color: gray;
+    color: white;
+}
+ .centro {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 0%;
+          
+        }
